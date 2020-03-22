@@ -37,7 +37,7 @@ cd obasic
 ```
 
 ```
-sudo python obasic.py
+python3 obasic.py
 ```
 
 
