@@ -1,6 +1,6 @@
 # OBASIC
 
-Make Linux easier to use! Version 1.0
+Make Linux easier to use! Version 0.5
 
 ## Getting Started
 
