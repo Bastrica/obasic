@@ -3,20 +3,41 @@ import os
 import time
 import sys
 import signal
+
+def clear_chat():
+    print("\n" * 100)  
  
+clear_chat()
+print("\033[1;37;41m")
+print("    -! Warning - This is First Version If you delete this tool !- ")
+print("-! All Installed programs with this Tool will be deleted due to bug !-")
+print("      -! This bug will be fixed in 1.0 Version of this Tool !-")
+print("                   -! Thanks for Support !-")
+print("")
+print("Loading..")
+print("10")
+time.sleep(5)
+print("5")
+time.sleep(2)
+print("3")
+time.sleep(1)
+print("2")
+time.sleep(1)
+print("1")
+time.sleep(0.5)
 # Def
-print("\033[1;34;34m \n")
+print("\033[1;34;40m \n")
 def basicbanner():
  
     print(" ____  _               _      ")
     print("/  __\| |             (_)     ")
     print("| |  || |__   __ _ ___ _  ___ ")
     print("| |  || '_ \ / _` / __| |/ __|")
-    print("| |__|| |_) | (_| \__ \ | (__by @bastrica ~ version 2.0 ")
+    print("| |__|| |_) | (_| \__ \ | (__by @bastrica ~ version 0.5 ")
     print("\____/|_.__/ \__,_|___/_|\___|")
     print("")
     print("- !Make Linux easier - For New Users! -")
-    print("")
+
                                
                                
  
@@ -26,21 +47,19 @@ def clear_chat():
 # Komande #
 clear_chat()
 print("Checking for updates.. Please wait!")
-time.sleep(0.6)
+time.sleep(2)
 print("No new updates..")
+time.sleep(1)
 clear_chat()
 def menu():
-    print("\033[1;34;34m \n")
+    print("\033[1;34;40m \n")
     basicbanner()
     print("     [LINUX]                        ")
     print('')
-    print(" [1] Check For Updates")
-    print(" [2] GitHub Programs")
-    print(" [3] Softwares")
-    print(" [4] LinuxMint Commands")
-    print(" [5] About LinuxMint")
-    print(" [6] Credits")
-    print(" [7] Update & Upgrade")
+    print(" [1] GitHub Programs")
+    print(" [2] Softwares")
+    print(" [3] Credits")
+    print(" [4] Update & Upgrade")
     print(" [8] Exit")
     while 5:
         try:
@@ -58,14 +77,15 @@ def menu():
     choice = str(choicer)
    
  
- 
-    if choice == "2": 
+    if choice == "1": 
         clear_chat()
         basicbanner()
+        clear_chat()
         print("Loading...")
         time.sleep(2)   
+        clear_chat()
         basicbanner()
-        print("GitHub Programs \n [1] FACEBOOK-FBI \n [2] BLACKEYE \n [3] INSTA-BRUTE \n [0] MENU ")
+        print("GitHub Programs \n [1] FBI Facebook \n [2] Blackeye \n [3] Insta-Brute \n [0] Menu ")
         choice = input("Choose option: ")
  
  
@@ -113,13 +133,13 @@ def menu():
  
  
    
-    if choice == "3":     # SOFTWARES
+    if choice == "2":     # SOFTWARES
         clear_chat()
         print("Loading..")
         time.sleep(2)
         clear_chat()
         basicbanner()
-        print("Choose software to install \n [1] WINE \n [2] WINE TRICKS \n [3] PHP \n [4] MYSQL-SERVER \n [5] APACHE2 \n [6] PYTHON 3 \n [7] MENU")
+        print("Choose software to install \n [1] Wine \n [2] Wine Tricks \n [3] Php \n [4] MySql - Servr \n [5] Apache2 \n [6] Python 3 \n [0] Menu")
         choice = input("Choose option: ")
  
         if choice == "1":
@@ -182,7 +202,6 @@ def menu():
             os.getenv("HOME")
             os.system('sudo apt-get install software-properties-common')
             os.system('sudo add-apt-repository ppa:deadsnakes/ppa')
-            os.system('sudo apt-get update')
             os.system('sudo apt-get install python3.6')
             clear_chat()
             basicbanner()
@@ -191,7 +210,7 @@ def menu():
             clear_chat()
             menu()
  
-        if choice == "7":
+        if choice == "0":
             clear_chat()
             print("Loading Menu...")
             time.sleep(2)
@@ -201,30 +220,13 @@ def menu():
             clear_chat()
             menu()
  
- 
-    if choice == "1":
-        clear_chat()
-        time.sleep(0.5)
-        basicbanner()
-        print("Checking for Updates")
-        time.sleep(0.5)
-        clear_chat()
-        basicbanner()
-        print("No new updates..")
-        time.sleep(1)
-        clear_chat()
-        print("Loading Menu")
-        time.sleep(0.5)
-        clear_chat()
-        menu()
- 
-    if choice == "6":
+    if choice == "3":
         time.sleep(0.6)
         clear_chat()
         basicbanner()
-        print(" Made by Bastrica \n Version 2.0 \n \n Credits: \n xHak9x - for program (fbi) \n \n thelinuxchoice - for program (blackeye & instainsane) \n \n \n [0] Menu")
+        print(" Made by Bastrica \n Version 0.5 \n \n Credits: \n aqamarine228 \n \n [0] Menu")
         choice = input("Enter number: ")
-        if choice == 0:
+        if choice == "0":
             clear_chat()
             print("Loading..")
             time.sleep(1)
@@ -257,7 +259,5 @@ def menu():
         time.sleep(1)
         clear_chat()
         menu()
- 
- 
  
 menu()
