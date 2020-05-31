@@ -90,10 +90,13 @@ def menu():
  
  
         if choice == "1":
-            os.getenv("HOME")
+            os.chdir('tools')
             os.system('git clone https://github.com/xHak9x/fbi.git')
+            os.chdir('fbi')
+            os.system('pip2 install -r requirements.txt')
+            time.sleep(1)
             clear_chat()
-            print("Installed & saved in /OBasic/fbi")
+            print("Installed & saved in Tools folder, make sure you change Fbi folder destination!")
             time.sleep(1)
             clear_chat()
             menu()
