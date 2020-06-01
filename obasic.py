@@ -3,29 +3,52 @@ import os
 import time
 import sys
 import signal
+import shutil
+def error1():
+	print("This option doesn't exist, please enter another one!")
+
+def exit():
+    clear_chat()
+    print("Exiting..")
+    time.sleep(0.5)
+    os.system('exit')
 
 def clear_chat():
-    print("\n" * 100)  
+    print("\n" * 999)  
+    
+def loading():
+	print("5")
+	time.sleep(2)
+	for i in range(3, 0, -1):
+		print(i)
+		time.sleep(1)
  
+
 clear_chat()
 print("\033[1;37;41m")
-print("    -! Warning - This is First Version If you delete this tool !- ")
-print("-! All Installed programs with this Tool will be deleted due to bug !-")
-print("      -! This bug will be fixed in 1.0 Version of this Tool !-")
-print("                   -! Thanks for Support !-")
+print(" -!      Warning - This is First Version        !- ")
+print(" -!       Maybe there will be some bugs         !-")
+print(" -!    Every bug will be fixed in 1.0 Version   !-")
+print(" -!       Report bugs on my github profile      !-")
 print("")
 print("Loading..")
-print("10")
-time.sleep(5)
-print("5")
-time.sleep(2)
-print("3")
-time.sleep(1)
-print("2")
-time.sleep(1)
-print("1")
-time.sleep(0.5)
+loading()
+
 # Def
+def installedmsg():
+	clear_chat()
+	print("Saved in Tools Folder!")
+	time.sleep(1)
+	clear_chat()
+	os.chdir("..")
+	menu()
+	
+def validNumber():
+    clear_chat()
+    print("Please enter a valid number!")
+    time.sleep(1)
+    clear_chat()
+
 print("\033[1;34;40m \n")
 def basicbanner():
  
@@ -46,8 +69,9 @@ def clear_chat():
  
 # Komande #
 clear_chat()
+username = os.getlogin()
 print("Checking for updates.. Please wait!")
-time.sleep(2)
+time.sleep(1)
 print("No new updates..")
 time.sleep(1)
 clear_chat()
@@ -60,7 +84,7 @@ def menu():
     print(" [2] Softwares")
     print(" [3] Credits")
     print(" [4] Update & Upgrade")
-    print(" [8] Exit")
+    print(" [0] Exit")
     while 5:
         try:
             choicer = int(input("\n Enter number: "))
@@ -76,63 +100,37 @@ def menu():
  
     choice = str(choicer)
    
- 
+
     if choice == "1": 
         clear_chat()
         basicbanner()
-        clear_chat()
         print("Loading...")
-        time.sleep(2)   
+        os.chdir('Tools')
+        time.sleep(1)   
         clear_chat()
         basicbanner()
-        print("GitHub Programs \n [1] FBI Facebook \n [2] Blackeye \n [3] Insta-Brute \n [0] Menu ")
+        print(" GitHub Programs \n \n [1] FBI - Facebook \n [2] Blackeye \n [3] Insta-Brute \n [0] Menu")
         choice = input("Choose option: ")
  
  
         if choice == "1":
-            os.chdir('tools')
             os.system('git clone https://github.com/xHak9x/fbi.git')
-            os.chdir('fbi')
-            os.system('pip2 install -r requirements.txt')
-            time.sleep(1)
-            clear_chat()
-            print("Installed & saved in Tools folder, make sure you change Fbi folder destination!")
-            time.sleep(1)
-            clear_chat()
-            menu()
+            installedmsg()
  
         if choice == "2":
             os.system('git clone https://github.com/thelinuxchoice/blackeye')
-            print("Installed & saved in /OBASIC/blackeye & Make [blackeye] executable")
-            clear_chat()
-            time.sleep(1)
-            clear_chat()
-            menu()
+            installedmsg()
        
         if choice == "3":
             os.system('git clone https://github.com/thelinuxchoice/instainsane')
-            print("Installed & saved in /OBasic/instainsane & Make [instainsane] executable")
-            clear_chat()
-            time.sleep(1)
-            clear_chat()
-            menu()
+            installedmsg()
  
         if choice == "0":
-            clear_chat()
-            print("Loading")
-            time.sleep(2)
-            clear_chat()
-            print("Loaded")
-            time.sleep(0.1)
             clear_chat()
             menu()
  
         else:
-            clear_chat()
-            print("Enter another number!")
-            time.sleep(1)
-            clear_chat()
-            menu()
+            validNumber()
  
  
    
@@ -222,6 +220,7 @@ def menu():
             time.sleep(0.3)
             clear_chat()
             menu()
+
  
     if choice == "3":
         time.sleep(0.6)
@@ -247,20 +246,13 @@ def menu():
         time.sleep(0.3)
         menu()
  
-    if choice == "8":
-        clear_chat()
-        time.sleep(0.5)
-        basicbanner()
-        print("Exiting.. please wait & don't turn of your pc!")
-        time.sleep(2)
-        clear_chat()
-        basicbanner()
-        os.kill(os.getppid(), signal.SIGHUP)
+    if choice == "0":
+        exit()
  
     else:
-        print("This option doesn't exist, please enter another one!")
+        error1()
         time.sleep(1)
         clear_chat()
         menu()
- 
+        
 menu()
